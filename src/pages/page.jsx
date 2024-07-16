@@ -5,6 +5,7 @@ import Tours from "./tours/tours";
 import VisaSupport from "./visasupport/support";
 import Explore from "./tourtransport/explore";
 import TourCities from "./tourplaces/countries";
+import Reservation from "./reservation/reservation";
 
 const Page = () => {
   return (
