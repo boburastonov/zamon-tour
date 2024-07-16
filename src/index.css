@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  width: 208px;
+  height: 2px;
+  border-radius: 0;
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+  margin-bottom: 85px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #22b3c1;
+  width: 208px;
+  height: 2px;
+  border-radius: 0;
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+  margin-bottom: 85px !important;
+}
