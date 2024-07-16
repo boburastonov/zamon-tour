@@ -17,7 +17,7 @@ const Transportcard = ({img, heading, littleText, mainText}) => {
         <div className="absolute right-[227px] top-0">
           <a
             href="#contact"
-            className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s]"
+            className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80"
           >
             Explore More
           </a>
