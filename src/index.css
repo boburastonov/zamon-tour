@@ -9,6 +9,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: white;
+}
+
 .swiper-pagination-bullet {
   background-color: #fff !important;
   width: 208px;

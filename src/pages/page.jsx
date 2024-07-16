@@ -4,6 +4,7 @@ import Slider from "./slider/slider";
 import Tours from "./tours/tours";
 import VisaSupport from "./visasupport/support";
 import Explore from "./tourtransport/explore";
+import TourCities from "./tourplaces/countries";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <Tours />
       <VisaSupport />
       <Explore />
+      <TourCities />
     </>
   );
 };
