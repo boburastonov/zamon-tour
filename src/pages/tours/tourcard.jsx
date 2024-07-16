@@ -8,7 +8,7 @@ const Tourcard = ({ imgSource, cityName, userCount, price }) => {
   return (
     <div className="relative w-[400px]   h-[470px]" id="tours">
       <img
-        className="rounded-[23px] overflow-hidden block w-[250px] h-96"
+        className="rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block w-[250px] h-96"
         src={imgSource}
       />
       <div className="absolute w-[300px] top-12 right-0 bg-white rounded-[23px] shadow-[0px_0px_15px_rgba(0,0,0,0.15)] p-[30px] ">
