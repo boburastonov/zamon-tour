@@ -5,7 +5,7 @@ import Contactcard from "./contactcard";
 
 const Contact = () => {
   return (
-    <div className="mt-[-99px]">
+    <div id="contact" className="mt-[-99px]">
       <div className="max-w-7xl mx-auto px-3 flex items-center justify-between">
         <Contactcard
           icon={<FaPhoneAlt />}
