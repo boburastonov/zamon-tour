@@ -3,7 +3,7 @@ import CountriesCard from "./countriescard";
 
 const TourCities = () => {
   return (
-    <div id="about" className="pt-10 bg-white">
+    <div className="pt-10 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="px-3 mb-[80px] text-left w-[520px]">
           <h2 className="m-0 mb-5 leading-[36px] text-[30px] font-bold capitalize text-[#2a2a2a]">
