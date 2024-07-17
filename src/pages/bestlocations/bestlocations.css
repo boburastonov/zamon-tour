@@ -8,20 +8,20 @@ Jose Rodriguez */
   transition: all 0.3s ease;
 }
 
-input {
+.slider-input {
   display: none;
 }
 
-input:checked + label {
+.slider-input:checked + label {
   width: 600px;
 }
 
-input:not(:checked) + label .num {
+.slider-input:not(:checked) + label .num {
   margin-left: 10px;
   margin-bottom: -30px;
 }
 
-input:checked + label .description {
+.slider-input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }

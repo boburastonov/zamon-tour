@@ -13,7 +13,7 @@ const BestLocations = () => {
           <p className="text-[15px] leading-[30px] text-[#afafaf]"></p>
         </div>
         <div className="flex flex-nowrap h-[400px] justify-center mx-auto">
-          <input type="radio" name="slide" id="c1" defaultChecked />
+          <input type="radio" className="slider-input" name="slide" id="c1" defaultChecked />
           <label
             htmlFor="c1"
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
@@ -28,7 +28,7 @@ const BestLocations = () => {
               </div>
             </div>
           </label>
-          <input type="radio" name="slide" id="c2" />
+          <input type="radio" className="slider-input" name="slide" id="c2" />
           <label
             htmlFor="c2"
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
@@ -43,7 +43,7 @@ const BestLocations = () => {
               </div>
             </div>
           </label>
-          <input type="radio" name="slide" id="c3" />
+          <input type="radio" className="slider-input" name="slide" id="c3" />
           <label
             htmlFor="c3"
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
@@ -58,7 +58,7 @@ const BestLocations = () => {
               </div>
             </div>
           </label>
-          <input type="radio" name="slide" id="c4" />
+          <input type="radio" className="slider-input" name="slide" id="c4" />
           <label
             htmlFor="c4"
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
@@ -75,7 +75,7 @@ const BestLocations = () => {
               </div>
             </div>
           </label>
-          <input type="radio" name="slide" id="c5" />
+          <input type="radio" className="slider-input" name="slide" id="c5" />
           <label
             htmlFor="c5"
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
