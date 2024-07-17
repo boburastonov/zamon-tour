@@ -1,0 +1,9 @@
+.guests {
+  background-position: right 0.75rem center;
+  background-position-y: center;
+  background-size: 16px 12px;
+}
+
+option {
+  padding: 0px 2px 1px;
+}
