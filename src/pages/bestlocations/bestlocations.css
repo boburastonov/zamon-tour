@@ -1,0 +1,47 @@
+/* author: https://codepen.io/danielwuachin/pen/NWoqxjv
+Jose Rodriguez */
+.card {
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+}
+
+.card > .row > .description {
+  transition: all 0.3s ease;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:not(:checked) + label .num {
+  margin-left: 10px;
+  margin-bottom: -30px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url("https://zamontour.uz/assets/images/dubai.jpg");
+}
+
+.card[for="c2"] {
+  background-image: url("https://zamontour.uz/assets/images/antalya.jpg");
+}
+
+.card[for="c3"] {
+  background-image: url("https://zamontour.uz/assets/images/istanbul.jpg");
+}
+
+.card[for="c4"] {
+  background-image: url("https://zamontour.uz/assets/images/sharm.jpg");
+}
+
+.card[for="c5"] {
+  background-image: url("https://zamontour.uz/assets/images/best-05.jpg");
+}
