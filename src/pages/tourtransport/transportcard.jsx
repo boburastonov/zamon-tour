@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Transportcard = ({ img, heading, littleText, mainText }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex relative w-[1076px] px-3 pb-[30px] mb-[30px] border-b border-solid border-[#eee]">
       <div className="w-[367px] pr-3">
@@ -16,7 +19,7 @@ const Transportcard = ({ img, heading, littleText, mainText }) => {
             href="#contact"
             className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80"
           >
-            Explore More
+            {t('Explore More')}
           </a>
         </div>
         <p className=" m-0 my-[18px] text-[15px] leading-[30px] text-[#afafaf]">

@@ -3,8 +3,10 @@ import Tourcard from "./tourcard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 const Tours = () => {
+  const { t } = useTranslation();
   let sliderRef = useRef(null);
   const handleNext = () => {
     sliderRef.slickNext();
@@ -25,12 +27,14 @@ const Tours = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-[80px]">
           <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
-            Best Weekly Offers In Each Day
+            {t("Best Weekly Offers In Each Day")}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">
-            Discover the best weekly offers in each city, curated just for you.
-            Immerse yourself in <br /> a world of savings and indulge in
-            unparalleled experiences.
+            {t(
+              "Discover the best weekly offers in each city, curated just for you. Immerse yourself in"
+            )}{" "}
+            <br />{" "}
+            {t("a world of savings and indulge in unparalleled experiences.")}
           </p>
         </div>
         <div className="flex flex-col">
@@ -43,46 +47,46 @@ const Tours = () => {
           >
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/deals-04.jpg"}
-              cityName={"Istanbul"}
+              cityName={t("Istanbul")}
               userCount={234}
               price={"$420"}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/offers-02.jpg"}
-              cityName={"Dubai"}
+              cityName={t("Dubai")}
               userCount={300}
               price={"$700"}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/deals-01.jpg"}
-              cityName={"Antalya"}
+              cityName={t("Antalya")}
               userCount={500}
               price={"$999"}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/offers-01.jpg"}
-              cityName={"Sharm El-Sheikh"}
+              cityName={t("Sharm El-Sheikh")}
               userCount={200}
               price={"$800"}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/usa1.jpg"}
-              cityName={"USA"}
+              cityName={t("USA")}
               userCount={400}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/deals-02.jpg"}
-              cityName={"England"}
+              cityName={t("England")}
               userCount={234}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/cand.jpg"}
-              cityName={"Canada"}
+              cityName={t("Canada")}
               userCount={345}
             />
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/europe2.jpg"}
-              cityName={"European Union"}
+              cityName={t("European Union")}
               userCount={345}
             />
           </Slider>

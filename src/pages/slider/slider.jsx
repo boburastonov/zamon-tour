@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,6 +14,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import MoreInfo from "../../components/more-info";
 
 export default function App() {
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <Swiper
@@ -24,8 +26,6 @@ export default function App() {
         }}
         pagination={{
           clickable: true,
-          // bulletClass: "swiper-custom-bullet",
-          // bulletActiveClass: "swiper-custom-bullet-active",
         }}
         modules={[Autoplay, Pagination]}
         className="mySwiper"
@@ -34,17 +34,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/istanbul.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative">
               <h2 className="text-white font-medium text-[20px] mb-5">
-                Take a Glimpse Into The Beautiful City Of:
+                {t('Take a Glimpse Into The Beautiful City Of')}:
               </h2>
               <h1 className="mb-[30px] text-white font-bold text-[50px]">
-                Istanbul
+                {t('Istanbul')}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  Go There
+                  {t('Go There')}
                 </a>
               </div>
               <MoreInfo
@@ -55,21 +55,21 @@ export default function App() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide> 
+        <SwiperSlide>
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/antalya2.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative">
               <h2 className="text-white font-medium text-[20px] mb-5">
-                Take a Glimpse Into The Beautiful City Of:
+                {t('Take a Glimpse Into The Beautiful City Of')}:
               </h2>
               <h1 className="mb-[30px] text-white font-bold text-[50px]">
-                Antalya
+                {t('Antalya')}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  Go There
+                  {t('Go There')}
                 </a>
               </div>
               <MoreInfo
@@ -84,17 +84,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/dubai2.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative">
               <h2 className="text-white font-medium text-[20px] mb-5">
-                Take a Glimpse Into The Beautiful City Of:
+                {t('Take a Glimpse Into The Beautiful City Of')}:
               </h2>
               <h1 className="mb-[30px] text-white font-bold text-[50px]">
-                Dubai
+                {t('Dubai')}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  Go There
+                  {t('Go There')}
                 </a>
               </div>
               <MoreInfo
@@ -109,17 +109,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/sharm.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative">
               <h2 className="text-white font-medium text-[20px] mb-5">
-                Take a Glimpse Into The Beautiful City Of:
+                {t('Take a Glimpse Into The Beautiful City Of')}:
               </h2>
               <h1 className="mb-[30px] text-white font-bold text-[50px]">
-                Sharm El-Sheikh
+                {t('Sharm El-Sheikh')}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  Go There
+                  {t('Go There')}
                 </a>
               </div>
               <MoreInfo

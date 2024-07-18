@@ -4,6 +4,7 @@ import { RiUser3Fill } from "react-icons/ri";
 import { FaGlobe } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "./countries.css";
+import { useTranslation } from "react-i18next";
 
 const CountriesCard = ({
   img,
@@ -14,6 +15,7 @@ const CountriesCard = ({
   area,
   price,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="flex relative w-[1076px] px-3 pb-[30px] mb-[30px] border-b border-solid border-[#eee]">
       <div className="w-[367px] pr-3">
@@ -29,7 +31,7 @@ const CountriesCard = ({
             href="#contact"
             className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80"
           >
-            Explore More
+            {t("Explore More")}
           </a>
         </div>
         <p className=" m-0 my-[18px] text-[15px] leading-[30px] text-[#afafaf]">
@@ -37,8 +39,8 @@ const CountriesCard = ({
         </p>
         <ul className="flex items-center justify-between p-0 m-0 py-[15px] list-none border-b border-t border-solid border-[#eee]">
           <li className="flex text-[#afafaf] text-[14px]">
-            <RiUser3Fill className="mr-[5px] text-[16px]" /> {peopleCount} Mill
-            People
+            <RiUser3Fill className="mr-[5px] text-[16px]" /> {peopleCount} Mill {' '}
+            {t("People")}
           </li>
           <li className="flex w-[32%] text-[#afafaf] text-[14px]">
             <FaGlobe className="mr-[5px] text-[16px]" /> {area} km2
@@ -52,7 +54,7 @@ const CountriesCard = ({
             href="#contact"
             className="new-dr flex items-center text-[#22b3c1] hov"
           >
-            New Directions?{" "}
+            {t("New Directions")}?{" "}
             <FaArrowRightLong className="right-ic ml-[5px] transition-all duration-[0.3s]" />
           </a>
         </div>

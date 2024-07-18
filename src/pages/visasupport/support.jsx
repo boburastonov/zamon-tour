@@ -3,8 +3,10 @@ import SupportCard from "./offercard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 const VisaSupport = () => {
+  const { t } = useTranslation();
   let sliderRef = useRef(null);
   const handleNext = () => {
     sliderRef.slickNext();
@@ -25,10 +27,10 @@ const VisaSupport = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-[80px]">
           <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
-            Visa Support
+            {t('Visa Support')}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">
-          Experience stress-free travel with our expert visa support. We provide seamless <br /> assistance and comprehensive guidance, ensuring a smooth journey.
+          {t('Experience stress-free travel with our expert visa support. We provide seamless')} <br /> {t('assistance and comprehensive guidance, ensuring a smooth journey')}.
           </p>
         </div>
         <div className="flex flex-col">
@@ -41,31 +43,31 @@ const VisaSupport = () => {
           >
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/japan.jpg"}
-              cityName={"Japan"}
+              cityName={t("Japan")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/saudi.jpg"}
-              cityName={"Saudi Arabia"}
+              cityName={t("Saudi Arabia")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/oman.jpg"}
-              cityName={"Oman"}
+              cityName={t("Oman")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/china.jpg"}
-              cityName={"China"}
+              cityName={t("China")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/hongkong.jpg"}
-              cityName={"Hong Kong"}
+              cityName={t("Hong Kong")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/europe.jpeg"}
-              cityName={"European(Schengen)"}
+              cityName={t("European(Schengen)")}
             />
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/india.jpg"}
-              cityName={"India"}
+              cityName={t("India")}
             />
           </Slider>
           <div className="flex mx-auto items-center">

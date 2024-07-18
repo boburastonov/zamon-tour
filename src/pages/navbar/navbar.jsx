@@ -1,7 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+  const changeLang = (e) => {
+    i18n.changeLanguage(e);
+  };
   return (
     <header className="bg-[#22b3c1] text-gray-600 body-font">
       <div className="w-full max-w-7xl mx-auto lg:flex py-[15px] flex-col md:flex-row lg:items-center">
@@ -182,65 +187,69 @@ const Navbar = () => {
             </defs>
           </svg>
         </Link>
-        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <ul>
+        <nav className="md:ml-auto md:mr-auto text-base justify-center">
+          <ul className="flex flex-wrap items-center">
             <li className="px-[10px]">
               <a
                 href="/"
                 className="font-normal text-[15px] px-[15px] py-2 text-white hover:opacity-80"
               >
-                Home
+                {t("Home")}
               </a>
             </li>
-          </ul>
-          <ul>
             <li className="px-[10px]">
               <a
                 href="#about"
                 className="font-normal text-[15px] px-[15px] py-2 text-white hover:opacity-80"
               >
-                About
+                {t("About")}
               </a>
             </li>
-          </ul>
-          <ul>
             <li className="px-[10px]">
               <a
-              
                 href="#tours"
                 className="font-normal text-[15px] px-[15px] py-2 text-white hover:opacity-80"
               >
-                Tours
+                {t("Tours")}
               </a>
             </li>
-          </ul>
-          <ul>
+
             <li className="px-[10px]">
               <a
                 href="#contact"
                 className="font-normal text-[15px] px-[15px] py-2 text-white hover:opacity-80"
               >
-                Contact
+                {t("Contact")}
               </a>
             </li>
           </ul>
         </nav>
         <ul className="flex items-center justify-between">
-          <li className="mr-5">
-            <a className="text-white hover:text-black" href="/uz">
-              UZ
-            </a>
-          </li>
-          <li className="mr-5">
-            <a className="text-white hover:text-black" href="/eng">
+        <li className="mr-5">
+            <a
+              className="text-white cursor-pointer hover:text-black"
+              onClick={() => changeLang("eng")}
+            >
               ENG
             </a>
           </li>
           <li className="mr-5">
-            <a className="text-white hover:text-black" href="/ru">
+            <a
+              className="text-white cursor-pointer hover:text-black"
+              onClick={() => changeLang("uz")}
+            >
+              UZ
+            </a>
+          </li>
+          <li className="mr-5">
+            <a
+              className="text-white cursor-pointer hover:text-black"
+              onClick={() => changeLang("ru")}
+            >
               RU
             </a>
           </li>
+         
           <li className="mr-5">
             <a
               className="text-red-600"

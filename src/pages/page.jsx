@@ -26,7 +26,7 @@ const Page = () => {
       <Reservation />
       <Contact />
       <AreaMap />
-       <Form />
+      <Form />
       <CTA />
       <Footer />
     </>
