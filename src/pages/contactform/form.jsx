@@ -5,6 +5,36 @@ import { useTranslation } from "react-i18next";
 const Form = () => {
   const { t } = useTranslation();
 
+  const SendMessage = (e) => {
+    e.preventDefault();
+    const token = "7229813830:AAFlDf6El0NDlFH5wod5x8vT1jV-IJhEKU8";
+    const chat_id = "5730538728";
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const name = document.getElementById("name");
+    const phoneNumber = document.getElementById("number");
+    const guests = document.getElementById("chooseGuests");
+    const date = document.getElementById("date");
+    const destination = document.getElementById("chooseCategory");
+    const visaSupport = document.getElementById("visa");
+    const messageContent = `Name: ${name} \nPhone Number: ${phoneNumber} \nNumber Of Guests: ${guests} \nDate: ${date} \nDestination: ${destination} \nVisa Support: ${visaSupport}`;
+
+    axios({
+      url: url,
+      method: "POST",
+      data: {
+        chat_id: chat_id,
+        text: messageContent,
+      },
+    })
+      .then((res) => {
+        document.getElementById("reservation-form").reset();
+        alert(t("Your reservation has been sent successfully!"));
+      })
+      .catch((err) => {
+        console.log("Yuborishda xatolik,", err);
+      });
+  };
+
   return (
     <div className="mb-[70px]">
       <div className="max-w-7xl mx-auto px-3">
@@ -13,11 +43,14 @@ const Form = () => {
           method="post"
           id="reservation-form"
           className="py-[60px] px-[120px] bg-[#f9f9f9] rounded-br-[23px] rounded-bl-[23px]"
+          onSubmit={SendMessage}
         >
           <div className="px-3">
             <h4 className="text-[30px] text-center m-0 mb-[50px] text-[#2a2a2a] font-bold leading-[1.2]">
-              {t('Make Your')}{" "}
-              <em className="text-[#22b3c1] not-italic">{t('Reservation')}</em> {t('Through This')} <em className="text-[#22b3c1] not-italic">{t('Form')}</em>
+              {t("Make Your")}{" "}
+              <em className="text-[#22b3c1] not-italic">{t("Reservation")}</em>{" "}
+              {t("Through This")}{" "}
+              <em className="text-[#22b3c1] not-italic">{t("Form")}</em>
             </h4>
           </div>
           <div className="flex">
@@ -26,7 +59,7 @@ const Form = () => {
                 htmlFor="Name"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
               >
-                {t('Your Name')}
+                {t("Your Name")}
               </label>
               <input
                 type="text"
@@ -42,7 +75,7 @@ const Form = () => {
                 htmlFor="Number"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
               >
-                {t('Your Phone Number')}
+                {t("Your Phone Number")}
               </label>
               <input
                 type="text"
@@ -60,7 +93,7 @@ const Form = () => {
                 htmlFor="chooseGuests"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
               >
-                {t('Number Of Guests')}
+                {t("Number Of Guests")}
               </label>
               <select
                 id="chooseGuests"
@@ -72,7 +105,7 @@ const Form = () => {
                   className="block font-normal min-h-[1.2em] whitespace-nowrap"
                   selected
                 >
-                  ex. 3 {t('or')} 4 {t('or')} 5
+                  ex. 3 {t("or")} 4 {t("or")} 5
                 </option>
                 <option
                   className="block font-normal min-h-[1.2em] whitespace-nowrap"
@@ -107,10 +140,11 @@ const Form = () => {
                 htmlFor="Number"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
               >
-                {t('Check In Date')}
+                {t("Check In Date")}
               </label>
               <input
                 type="date"
+                id="date"
                 name="date"
                 required
                 className="w-full h-[46px] bg-transparent rounded-[23px] border border-solid border-[#e0e0e0] p-0 px-5 cursor-pointer mb-[30px]"
@@ -122,7 +156,7 @@ const Form = () => {
               htmlFor="chooseDestination"
               className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
             >
-              {t('Choose Your Destination')}
+              {t("Choose Your Destination")}
             </label>
             <select
               id="chooseCategory"
@@ -134,43 +168,43 @@ const Form = () => {
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 selected
               >
-                {t('Antalya')}
+                {t("Antalya")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Istanbul"}
               >
-                {t('Istanbul')}
+                {t("Istanbul")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Dubai"}
               >
-                {t('Dubai')}
+                {t("Dubai")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Sharm El-Sheikh"}
               >
-                {t('Sharm El-Sheikh')}
+                {t("Sharm El-Sheikh")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Kuala Lumpur"}
               >
-                {t('Kuala Lumpur')}
+                {t("Kuala Lumpur")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Canada"}
               >
-                {t('Canada')}
+                {t("Canada")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"England"}
               >
-                {t('England')}
+                {t("England")}
               </option>
             </select>
           </div>
@@ -179,7 +213,7 @@ const Form = () => {
               htmlFor="Name"
               className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
             >
-              {t('Choose Your Visa Support')}
+              {t("Choose Your Visa Support")}
             </label>
             <select
               id="visa"
@@ -191,67 +225,67 @@ const Form = () => {
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 selected
               >
-                {t('Country')}
+                {t("Country")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"USA"}
               >
-                {t('USA')}
+                {t("USA")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Europe"}
               >
-                {t('Europe')}
+                {t("Europe")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"England"}
               >
-                {t('England')}
+                {t("England")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Japan"}
               >
-                {t('Japan')}
+                {t("Japan")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Oman"}
               >
-                {t('Oman')}
+                {t("Oman")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Saudia Arabia"}
               >
-                {t('Saudi Arabi')}
+                {t("Saudi Arabi")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"India"}
               >
-                {t('India')}
+                {t("India")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"China"}
               >
-                {t('China')}
+                {t("China")}
               </option>
               <option
                 className="block font-normal min-h-[1.2em] whitespace-nowrap"
                 value={"Hong Kong"}
               >
-                {t('Hong Kong')}{" "}
+                {t("Hong Kong")}{" "}
               </option>
             </select>
           </div>
           <div className="px-3 w-full">
             <button className="w-full text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] text-center inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80">
-              {t('Make Your Reservation Now')}
+              {t("Make Your Reservation Now")}
             </button>
           </div>
         </form>

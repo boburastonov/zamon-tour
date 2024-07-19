@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -9,10 +10,10 @@ const Navbar = () => {
   };
   return (
     <header className="bg-[#22b3c1] text-gray-600 body-font">
-      <div className="w-full max-w-7xl mx-auto lg:flex py-[15px] flex-col md:flex-row lg:items-center">
+      <div className="max-w-7xl mx-auto lg:flex py-[15px] md:flex-col lg:items-center">
         <Link
           to="/"
-          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          className=" flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
         >
           <svg
             width="159"
@@ -187,7 +188,7 @@ const Navbar = () => {
             </defs>
           </svg>
         </Link>
-        <nav className="md:ml-auto md:mr-auto text-base justify-center">
+        <nav className="md:hidden md:mr-auto text-base justify-center">
           <ul className="flex flex-wrap items-center">
             <li className="px-[10px]">
               <a
@@ -213,7 +214,6 @@ const Navbar = () => {
                 {t("Tours")}
               </a>
             </li>
-
             <li className="px-[10px]">
               <a
                 href="#contact"
@@ -224,7 +224,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <ul className="flex items-center justify-between">
+        <ul className="flex items-center md:hidden">
         <li className="mr-5">
             <a
               className="text-white cursor-pointer hover:text-black"
@@ -317,6 +317,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <MobileNav />
       </div>
     </header>
   );
