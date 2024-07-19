@@ -25,16 +25,14 @@ const Tours = () => {
   return (
     <div className="bg-white py-[70px] border-b border-solid border-[#eee]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center mb-[80px]">
-          <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
+        <div className="flex flex-col items-center mb-[80px] w-[50%] mx-auto">
+          <h2 className="mt-0 mb-5 leading-9 text-[30px] text-center font-bold capitalize text-[#2a2a2a]">
             {t("Best Weekly Offers In Each Day")}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">
             {t(
-              "Discover the best weekly offers in each city, curated just for you. Immerse yourself in"
-            )}{" "}
-            <br />{" "}
-            {t("a world of savings and indulge in unparalleled experiences.")}
+              "Discover the best weekly offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+            )}
           </p>
         </div>
         <div className="flex flex-col">

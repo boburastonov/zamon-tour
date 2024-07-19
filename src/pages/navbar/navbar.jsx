@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -9,11 +8,11 @@ const Navbar = () => {
     i18n.changeLanguage(e);
   };
   return (
-    <header className="bg-[#22b3c1] text-gray-600 body-font">
-      <div className="max-w-7xl mx-auto lg:flex py-[15px] md:flex-col lg:items-center">
+    <header className="bg-[#22b3c1] text-gray-600 body-font sticky top-0 z-30">
+      <div className="w-full max-w-7xl mx-auto lg:flex py-[15px] flex-col md:flex-row lg:items-center">
         <Link
           to="/"
-          className=" flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
         >
           <svg
             width="159"
@@ -188,7 +187,7 @@ const Navbar = () => {
             </defs>
           </svg>
         </Link>
-        <nav className="md:hidden md:mr-auto text-base justify-center">
+        <nav className="md:ml-auto md:mr-auto text-base justify-center">
           <ul className="flex flex-wrap items-center">
             <li className="px-[10px]">
               <a
@@ -224,7 +223,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <ul className="flex items-center md:hidden">
+        <ul className="flex items-center justify-between">
         <li className="mr-5">
             <a
               className="text-white cursor-pointer hover:text-black"
@@ -252,7 +251,6 @@ const Navbar = () => {
          
           <li className="mr-5">
             <a
-              className="text-red-600"
               href="https://t.me/zamonbiznestour"
               target="_blank"
             >
@@ -283,7 +281,6 @@ const Navbar = () => {
           </li>
           <li className="mr-5">
             <a
-              className="text-red-600"
               href="https://instagram.com/zamontour"
               target="_blank"
             >
@@ -317,7 +314,6 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <MobileNav />
       </div>
     </header>
   );

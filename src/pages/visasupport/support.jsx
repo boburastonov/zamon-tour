@@ -25,12 +25,12 @@ const VisaSupport = () => {
   return (
     <div className="bg-white py-[70px] border-b border-solid border-[#eee]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center mb-[80px]">
+        <div className="flex flex-col items-center mb-[80px] w-[50%] mx-auto">
           <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
             {t('Visa Support')}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">
-          {t('Experience stress-free travel with our expert visa support. We provide seamless')} <br /> {t('assistance and comprehensive guidance, ensuring a smooth journey')}.
+          {t('Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey.')}.
           </p>
         </div>
         <div className="flex flex-col">
