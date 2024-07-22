@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="mt-[-99px]">
-      <div className="max-w-7xl mx-auto px-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 flex items-center justify-between md:flex-wrap">
         <Contactcard
           icon={<FaPhoneAlt />}
           heading={t("Make a Phone Call")}

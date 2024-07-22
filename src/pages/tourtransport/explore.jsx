@@ -6,10 +6,10 @@ const Explore = () => {
   const { t } = useTranslation();
 
   return (
-    <div id="about" className="pt-10 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="px-3 mb-[80px] text-left w-[40%] mr-auto">
-          <h2 className="m-0 mb-5 leading-[36px] text-[30px] font-bold capitalize text-[#2a2a2a]">
+    <div id="about" className="lg:pt-10 md:pt-8 bg-white">
+      <div className="max-w-7xl md:mx-auto flex flex-col lg:items-start md:items-center">
+        <div className="px-3 lg:mb-[80px] lg:text-left w-[40%] lg:mr-auto md:text-center md:mb-[60px]">
+          <h2 className="m-0 mb-5 leading-[36px] lg:text-[30px] font-bold capitalize text-[#2a2a2a] md:mb-3 md:text-[26px]">
             {t('Explore Destination With Ease')}
           </h2>
           <p className="text-[16px] leading-[30px] text-[#afafaf]">

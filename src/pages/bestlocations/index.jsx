@@ -28,7 +28,7 @@ const BestLocations = () => {
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
           >
             <div className="flex flex-nowrap text-white">
-              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px]">
+              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px] ">
                 <FaExpand />
               </div>
               <div className="description flex flex-col justify-center text-white w-[520px] h-20 opacity-0 overflow-hidden transform translate-y-[30px] delay-[0.3s]">
@@ -45,7 +45,7 @@ const BestLocations = () => {
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
           >
             <div className="flex flex-nowrap text-white">
-              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px]">
+              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px] ">
                 <FaExpand />
               </div>
               <div className="description flex flex-col justify-center text-white w-[520px] h-20 opacity-0 overflow-hidden transform translate-y-[30px] delay-[0.3s]">
@@ -62,7 +62,7 @@ const BestLocations = () => {
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
           >
             <div className="flex flex-nowrap text-white">
-              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px]">
+              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px] ">
                 <FaExpand />
               </div>
               <div className="description flex flex-col justify-center text-white w-[520px] h-20 opacity-0 overflow-hidden transform translate-y-[30px] delay-[0.3s]">
@@ -81,7 +81,7 @@ const BestLocations = () => {
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
           >
             <div className="flex flex-nowrap text-white">
-              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px]">
+              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px] ">
                 <FaExpand />
               </div>
               <div className="description flex flex-col justify-center text-white w-[520px] h-20 opacity-0 overflow-hidden transform translate-y-[30px] delay-[0.3s]">
@@ -98,7 +98,7 @@ const BestLocations = () => {
             className="card flex items-end bg-cover rounded-[30px] shadow-[0px_10px_30px_-5px_rgba(0,0,0,0.8)] cursor-pointer m-0 mx-[10px] overflow-hidden w-[60px]"
           >
             <div className="flex flex-nowrap text-white">
-              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px]">
+              <div className="num flex items-center justify-center bg-white w-10 h-10 rounded-[50%] text-[#22b3c1] m-[15px] ">
                 <FaExpand />
               </div>
               <div className="description flex flex-col justify-center text-white w-[520px] h-20 opacity-0 overflow-hidden transform translate-y-[30px] delay-[0.3s]">

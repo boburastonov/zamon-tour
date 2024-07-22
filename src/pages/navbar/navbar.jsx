@@ -1,6 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
+import { RiMenu3Fill } from "react-icons/ri";
+import { IoClose } from "react-icons/io5";
+import './navbar.css'
+
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -8,11 +13,11 @@ const Navbar = () => {
     i18n.changeLanguage(e);
   };
   return (
-    <header className="bg-[#22b3c1] text-gray-600 body-font sticky top-0 z-30">
-      <div className="w-full max-w-7xl mx-auto lg:flex py-[15px] flex-col md:flex-row lg:items-center">
+    <header className="bg-[#22b3c1] text-gray-600 body-font sticky top-0 z-30 md:relative">
+      <div className="main-container w-full max-w-7xl mx-auto flex lg:py-[15px] md:py-[10px] px-2 items-center">
         <Link
           to="/"
-          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mr-auto"
         >
           <svg
             width="159"
@@ -187,8 +192,8 @@ const Navbar = () => {
             </defs>
           </svg>
         </Link>
-        <nav className="md:ml-auto md:mr-auto text-base justify-center">
-          <ul className="flex flex-wrap items-center">
+        <nav className="md:hidden lg:text-base lg:flex lg:mr-auto">
+          <ul className="lg:flex lg:flex-wrap lg:items-center text-base">
             <li className="px-[10px]">
               <a
                 href="/"
@@ -223,8 +228,8 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <ul className="flex items-center justify-between">
-        <li className="mr-5">
+        <ul className="lg:flex lg:items-center lg:justify-between md:hidden">
+          <li className="mr-5">
             <a
               className="text-white cursor-pointer hover:text-black"
               onClick={() => changeLang("eng")}
@@ -248,12 +253,9 @@ const Navbar = () => {
               RU
             </a>
           </li>
-         
+
           <li className="mr-5">
-            <a
-              href="https://t.me/zamonbiznestour"
-              target="_blank"
-            >
+            <a href="https://t.me/zamonbiznestour" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -280,10 +282,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="mr-5">
-            <a
-              href="https://instagram.com/zamontour"
-              target="_blank"
-            >
+            <a href="https://instagram.com/zamontour" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -314,6 +313,8 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <RiMenu3Fill className="lg:hidden text-[27px] text-white cursor-pointer hover:opacity-90" />
+        {/* <MobileNav /> */}
       </div>
     </header>
   );

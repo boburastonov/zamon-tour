@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .main-container {
+    display: flex; 
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  ul {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
+import "./tours.css";
 
 const Tours = () => {
   const { t } = useTranslation();
@@ -21,6 +22,26 @@ const Tours = () => {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 1800,
+    responsive: [
+      {
+        breakpoint: 320, // Set the breakpoint at 768px
+        settings: {
+          slidesToShow: 1, // Adjust this value as needed
+        },
+      },
+      {
+        breakpoint: 768, // Set the breakpoint at 768px
+        settings: {
+          slidesToShow: 2, // Adjust this value as needed
+        },
+      },
+      {
+        breakpoint: 1024, // An unrealistically large number to cover all screen resolutions
+        settings: {
+          slidesToShow: 2,
+        }, // Disable slick behavior beyond 768px
+      },
+    ],
   };
   return (
     <div className="bg-white py-[70px] border-b border-solid border-[#eee]">
@@ -35,13 +56,14 @@ const Tours = () => {
             )}
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:px-3">
           <Slider
             {...settings}
+            slide
             ref={(slider) => {
               sliderRef = slider;
             }}
-            className="lg:flex lg:items-center lg:justify-between"
+            className="md:ml-[-40px]"
           >
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/deals-04.jpg"}

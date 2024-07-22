@@ -19,27 +19,44 @@ const VisaSupport = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1800,
+    responsive: [
+      {
+        breakpoint: 768, // Set the breakpoint at 768px
+        settings: {
+          slidesToShow: 2, // Adjust this value as needed
+        },
+      },
+      {
+        breakpoint: 1024, // An unrealistically large number to cover all screen resolutions
+        settings: {
+          slidesToShow: 2,
+        }, // Disable slick behavior beyond 768px
+      },
+    ],
   };
   return (
-    <div className="bg-white py-[70px] border-b border-solid border-[#eee]">
+    <div className="bg-white lg:py-[70px] md:py-10 border-b border-solid border-[#eee]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-[80px] w-[50%] mx-auto">
           <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
-            {t('Visa Support')}
+            {t("Visa Support")}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">
-          {t('Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey.')}.
+            {t(
+              "Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey."
+            )}
+            .
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:px-3">
           <Slider
             {...settings}
             ref={(slider) => {
               sliderRef = slider;
             }}
-            className="lg:flex lg:items-center lg:justify-between"
+            className="md:ml-[-40px]"
           >
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/japan.jpg"}

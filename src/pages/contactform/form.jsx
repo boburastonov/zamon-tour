@@ -37,13 +37,13 @@ const Form = () => {
   };
 
   return (
-    <div className="mb-[70px]">
+    <div className="lg:mb-[70px] md:mb-14">
       <div className="max-w-7xl mx-auto px-3">
         <form
           name="rf"
           method="post"
           id="reservation-form"
-          className="py-[60px] px-[120px] bg-[#f9f9f9] rounded-br-[23px] rounded-bl-[23px]"
+          className="lg:py-[60px] lg:px-[120px] md:py-12 md:px-24 bg-[#f9f9f9] rounded-br-[23px] rounded-bl-[23px]"
           onSubmit={SendMessage}
         >
           <div className="px-3">

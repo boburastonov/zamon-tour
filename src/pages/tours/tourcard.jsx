@@ -7,7 +7,7 @@ import { t } from "i18next";
 
 const Tourcard = ({ imgSource, cityName, userCount, price }) => {
   return (
-    <div className="relative w-[400px]   h-[470px]" id="tours">
+    <div className="tour-card relative w-[400px] h-[470px] md:px-10" id="tours">
       <img
         className="rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block w-[250px] h-96"
         src={imgSource}

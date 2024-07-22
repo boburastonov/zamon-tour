@@ -45,3 +45,9 @@ Jose Rodriguez */
 .card[for="c5"] {
   background-image: url("https://zamontour.uz/assets/images/best-05.jpg");
 }
+
+@media (min-width: 768px) {
+  .slider-input:not(:checked) + label .num {
+    margin-left: 5px;
+  }
+}
