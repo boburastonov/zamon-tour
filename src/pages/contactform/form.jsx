@@ -11,12 +11,12 @@ const Form = () => {
     const token = "7229813830:AAFlDf6El0NDlFH5wod5x8vT1jV-IJhEKU8";
     const chat_id = "5730538728";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
-    const name = document.getElementById("name");
-    const phoneNumber = document.getElementById("number");
-    const guests = document.getElementById("chooseGuests");
-    const date = document.getElementById("date");
-    const destination = document.getElementById("chooseCategory");
-    const visaSupport = document.getElementById("visa");
+    const name = document.getElementById("name").value;
+    const phoneNumber = document.getElementById("number").value;
+    const guests = document.getElementById("chooseGuests").value;
+    const date = document.getElementById("date").value;
+    const destination = document.getElementById("chooseCategory").value;
+    const visaSupport = document.getElementById("visa").value;
     const messageContent = `Name: ${name} \nPhone Number: ${phoneNumber} \nNumber Of Guests: ${guests} \nDate: ${date} \nDestination: ${destination} \nVisa Support: ${visaSupport}`;
 
     axios({
@@ -68,6 +68,7 @@ const Form = () => {
                 name="Name"
                 placeholder={t("Ex. John Smithee")}
                 required
+                autoComplete="off"
                 className="w-full h-[46px] bg-transparent rounded-[23px] border border-solid border-[#e0e0e0] p-0 px-5 cursor-pointer mb-[30px]"
               />
             </div>
@@ -84,6 +85,7 @@ const Form = () => {
                 name="Number"
                 placeholder="Ex. +99899 999 99 99"
                 required
+                autoComplete="off"
                 className="w-full h-[46px] bg-transparent rounded-[23px] border border-solid border-[#e0e0e0] p-0 px-5 cursor-pointer mb-[30px]"
               />
             </div>
