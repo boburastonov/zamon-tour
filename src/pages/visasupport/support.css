@@ -7,4 +7,15 @@
   .support-heading {
     margin-bottom: 14px !important;
   }
+
+  .offer-card {
+    width: 300px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-img {
+    width: 200px !important;
+  }
+ 
 }

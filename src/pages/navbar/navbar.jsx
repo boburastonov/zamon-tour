@@ -228,7 +228,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <ul className="lg:flex lg:items-center lg:justify-between md:hidden">
+        <ul className="main-list sm:hidden lg:flex lg:items-center lg:justify-between ">
           <li className="mr-5">
             <a
               className="text-white cursor-pointer hover:text-black"

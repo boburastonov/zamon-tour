@@ -7,12 +7,12 @@ const SupportCard = ({ imgSource, cityName }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative w-[400px] h-[470px] md:px-10" id="tours">
+    <div className="offer-card relative md:w-[400px] h-[470px] md:px-10 lg:ml-[-30px]">
       <img
-        className="rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block w-[250px] h-44"
+        className="card-img rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block md:w-[250px] h-44"
         src={imgSource}
       />
-      <div className="absolute lg:w-[300px] md:w-[270px] top-12 right-0 bg-white rounded-[23px] shadow-[0px_0px_15px_rgba(0,0,0,0.15)] p-[30px]">
+      <div className="absolute w-[300px] top-12 md:right-0 right-[-25px] bg-white rounded-[23px] shadow-[0px_0px_15px_rgba(0,0,0,0.15)] p-[30px]">
         <h4 className="text-[20px] inline-block m-0 text-[#2a2a2a] font-bold">
           {cityName} <br />{" "}
           <span className="text-[15px] text-[#afafaf] font-normal flex items-center">

@@ -20,33 +20,27 @@ const Tours = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1800,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
           infinite: true,
-          dots: true
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 500,
-        settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
     ],
   };
   return (
@@ -69,7 +63,7 @@ const Tours = () => {
             ref={(slider) => {
               sliderRef = slider;
             }}
-            className="md:ml-[-40px]"
+            className="md:ml-[-40px] swiper-tour"
           >
             <Tourcard
               imgSource={"https://zamontour.uz/assets/images/deals-04.jpg"}

@@ -7,12 +7,12 @@ import { t } from "i18next";
 
 const Tourcard = ({ imgSource, cityName, userCount, price }) => {
   return (
-    <div className="tour-card relative w-[400px] h-[470px] md:px-10" id="tours">
+    <div className="tour-card relative md:w-[400px] h-[470px] md:px-10 md:ml-[-30px]" id="tours">
       <img
-        className="rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block w-[250px] h-96"
+        className="card-img rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block md:w-[250px] h-96"
         src={imgSource}
       />
-      <div className="absolute w-[300px] top-12 right-0 bg-white rounded-[23px] shadow-[0px_0px_15px_rgba(0,0,0,0.15)] p-[30px] ">
+      <div className="absolute lg:w-[300px] top-12 md:right-0 right-[-5px] bg-white rounded-[23px] shadow-[0px_0px_15px_rgba(0,0,0,0.15)] p-[30px] ">
         <h4 className="text-[20px] inline-block m-0 text-[#2a2a2a] font-bold">
           {cityName} <br />{" "}
           <span className="text-[15px] text-[#afafaf] font-normal flex items-center">

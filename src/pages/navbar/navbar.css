@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
   .main-container {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
   }
   .main-nav {
@@ -9,4 +9,9 @@
   .main-nav ul {
     display: none;
   }
+
+  .main-list {
+    display: none;
+  }
 }
+

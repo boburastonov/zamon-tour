@@ -1,11 +1,21 @@
 @media (max-width: 768px) {
-.tours {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+  .tours {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   .tours-pr {
     width: 100% !important;
     margin-bottom: 45px;
+  }
+
+  .tour-card {
+    width: 300px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-img {
+    width: 200px !important;
   }
 }

@@ -1,6 +1,8 @@
 // export default MobileNav
 import React from "react";
 import { useTranslation } from "react-i18next";
+import "./navbar.css";
+
 
 const MobileNav = () => {
   const { t, i18n } = useTranslation();
@@ -8,30 +10,36 @@ const MobileNav = () => {
     i18n.changeLanguage(e);
   };
   return (
-    <div className="lg:hidden max-w-28 absolute right-0 top-[76px] p-3 bg-[#22b3c1] px-[100px] transition-all duration-[.3s] text-white flex flex-col items-center text-base rounded-[10px]">
+    <div className="lg:hidden w-[90%] h-[410px] px-[100px] py-8 mx-auto absolute right-[50%] translate-x-[50%] top-[80px] shadow-black shadow-lg bg-[#22b3c1] transition-all duration-[.7s] text-white flex flex-col items-center justify-center text-base rounded-[10px]">
       <ul className="p-0 m-0 list-none">
-        <li className="mb-2">
-          <a href="/">{t('Home')}</a>
+        <li className="mb-4">
+          <a href="/">{t("Home")}</a>
         </li>
-        <li className="mb-2">
-          <a href="#about">{t('About')}</a>
+        <li className="mb-4">
+          <a href="#about">{t("About")}</a>
         </li>
-        <li className="mb-2">
-          <a href="#tours">{t('Tours')}</a>
+        <li className="mb-4">
+          <a href="#tours">{t("Tours")}</a>
         </li>
-        <li className="mb-2">
-          <a href="#contact">{t('Contact')}</a>
+        <li className="mb-4">
+          <a href="#contact">{t("Contact")}</a>
         </li>
-        <li className="mb-2">
-          <a href="#" onClick={() => changeLang("eng")}>ENG</a>
+        <li className="mb-4">
+          <a href="#" onClick={() => changeLang("eng")}>
+            ENG
+          </a>
         </li>
-        <li className="mb-2">
-          <a href="#" onClick={() => changeLang("uz")}>UZ</a>
+        <li className="mb-4">
+          <a href="#" onClick={() => changeLang("uz")}>
+            UZ
+          </a>
         </li>
-        <li className="mb-2">
-          <a href="#" onClick={() => changeLang("ru")}>RU</a>
+        <li className="mb-4">
+          <a href="#" onClick={() => changeLang("ru")}>
+            RU
+          </a>
         </li>
-        <li className="mb-2">
+        <li className="mb-4">
           <a href="https://t.me/zamonbiznestour" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +66,7 @@ const MobileNav = () => {
             </svg>
           </a>
         </li>
-        <li className="mb-2">
+        <li className="mb-4">
           <a href="https://instagram.com/zamontour" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +97,6 @@ const MobileNav = () => {
             </svg>
           </a>
         </li>
-        
       </ul>
     </div>
   );

@@ -20,26 +20,26 @@ const VisaSupport = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1800,
     responsive: [
       {
-        breakpoint: 400, // Set the breakpoint at 768px
-        settings: {
-          slidesToShow: 1, // Adjust this value as needed
-        },
-      },
-      {
-        breakpoint: 768, // Set the breakpoint at 768px
-        settings: {
-          slidesToShow: 2, // Adjust this value as needed
-        },
-      },
-      {
-        breakpoint: 1024, // An unrealistically large number to cover all screen resolutions
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-        }, // Disable slick behavior beyond 768px
+          slidesToScroll: 2,
+          initialSlide: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
       },
     ],
   };
@@ -63,7 +63,7 @@ const VisaSupport = () => {
             ref={(slider) => {
               sliderRef = slider;
             }}
-            className="md:ml-[-40px]"
+            className="md:ml-[-40px] swiper-tour"
           >
             <SupportCard
               imgSource={"https://zamontour.uz/assets/images/japan.jpg"}
