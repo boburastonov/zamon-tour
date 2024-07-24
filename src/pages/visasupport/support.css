@@ -1,11 +1,10 @@
 @media (max-width: 768px) {
-.tours {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-  .tours-pr {
+  .support-pr {
     width: 100% !important;
     margin-bottom: 45px;
+  }
+  
+  .support-heading {
+    margin-bottom: 14px !important;
   }
 }

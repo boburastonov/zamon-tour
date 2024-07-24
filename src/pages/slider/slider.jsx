@@ -33,7 +33,7 @@ export default function App() {
         <SwiperSlide>
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/istanbul.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative slider-container">
-              <h2 className="slider-heading text-white font-medium text-[20px] mb-5">
+              <h2 className="slider-heading text-white font-medium md:text-[20px] mb-5 text-[17px]">
                 {t('Take a Glimpse Into The Beautiful City Of')}:
               </h2>
               <h1 className="slider-country mb-[30px] text-white font-bold text-[50px]">

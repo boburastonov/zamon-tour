@@ -1,23 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-import './navbar.css'
-
+import "./navbar.css";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(); 
   const changeLang = (e) => {
     i18n.changeLanguage(e);
   };
+  const [open, setOpen] = useState(false);
   return (
     <header className="bg-[#22b3c1] text-gray-600 body-font sticky top-0 z-30 md:relative">
       <div className="main-container w-full max-w-7xl mx-auto flex lg:py-[15px] md:py-[10px] px-2 items-center">
         <Link
           to="/"
-          className="flex title-font font-medium items-center text-gray-900 mb-4 md:mr-auto"
+          className="my-auto mt-2 block title-font font-medium items-center text-gray-900 mb-4 md:mr-auto"
         >
           <svg
             width="159"
@@ -192,7 +192,7 @@ const Navbar = () => {
             </defs>
           </svg>
         </Link>
-        <nav className="md:hidden lg:text-base lg:flex lg:mr-auto">
+        <nav className="main-nav md:hidden lg:text-base lg:flex lg:mr-auto">
           <ul className="lg:flex lg:flex-wrap lg:items-center text-base">
             <li className="px-[10px]">
               <a
@@ -313,8 +313,18 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <RiMenu3Fill className="lg:hidden text-[27px] text-white cursor-pointer hover:opacity-90" />
-        {/* <MobileNav /> */}
+        {open ? (
+          <IoClose
+            onClick={() => setOpen(!open)}
+            className="lg:hidden text-[27px] text-white cursor-pointer hover:opacity-90"
+          />
+        ) : (
+          <RiMenu3Fill
+            onClick={() => setOpen(!open)}
+            className="lg:hidden text-[27px] text-white cursor-pointer hover:opacity-90"
+          />
+        )}{" "}
+        {open ? <MobileNav /> : ""}
       </div>
     </header>
   );

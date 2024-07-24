@@ -3,10 +3,10 @@
     display: flex; 
     justify-content: space-between;
   }
-  nav {
+  .main-nav {
     display: none;
   }
-  ul {
+  .main-nav ul {
     display: none;
   }
 }

@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+  }
+  
+  .contact-card {
+    width: 75% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-card:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

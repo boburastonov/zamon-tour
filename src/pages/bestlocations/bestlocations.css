@@ -16,9 +16,15 @@ Jose Rodriguez */
   width: 600px;
 }
 
+.slider-input:not(:checked) + label {
+  position: relative;
+}
+
 .slider-input:not(:checked) + label .num {
-  margin-left: 10px;
-  margin-bottom: -30px;
+  position: absolute;
+  margin: 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slider-input:checked + label .description {
@@ -46,8 +52,28 @@ Jose Rodriguez */
   background-image: url("https://zamontour.uz/assets/images/best-05.jpg");
 }
 
-@media (min-width: 768px) {
-  .slider-input:not(:checked) + label .num {
-    margin-left: 5px;
+@media (max-width: 768px) {
+  .slider-input:checked + label {
+    width: 250px;
+  }
+
+  .slider-input:not(:checked) + label {
+    width: 35px;
+  }
+
+  .num {
+    display: none !important;
+  }
+
+  .description {
+    margin-left: 7px;
+  }
+
+  .description h4 {
+    font-size: 14px;
+  }
+
+  .description p {
+    font-size: 12px;
   }
 }

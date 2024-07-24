@@ -43,7 +43,7 @@ const Form = () => {
           name="rf"
           method="post"
           id="reservation-form"
-          className="lg:py-[60px] lg:px-[120px] md:py-12 md:px-24 bg-[#f9f9f9] rounded-br-[23px] rounded-bl-[23px]"
+          className="lg:py-[60px] lg:px-[120px] md:py-12 md:px-24 py-9 bg-[#f9f9f9] rounded-br-[23px] rounded-bl-[23px]"
           onSubmit={SendMessage}
         >
           <div className="px-3">
@@ -54,8 +54,8 @@ const Form = () => {
               <em className="text-[#22b3c1] not-italic">{t("Form")}</em>
             </h4>
           </div>
-          <div className="flex">
-            <div className="px-3 w-[50%]">
+          <div className="md:flex">
+            <div className="px-3 md:w-[50%]">
               <label
                 htmlFor="Name"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
@@ -72,7 +72,7 @@ const Form = () => {
                 className="w-full h-[46px] bg-transparent rounded-[23px] border border-solid border-[#e0e0e0] p-0 px-5 cursor-pointer mb-[30px]"
               />
             </div>
-            <div className="px-3 w-[50%]">
+            <div className="px-3 md:w-[50%]">
               <label
                 htmlFor="Number"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
@@ -90,8 +90,8 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className="flex">
-            <div className="px-3 w-[50%]">
+          <div className="md:flex">
+            <div className="px-3 md:w-[50%]">
               <label
                 htmlFor="chooseGuests"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"
@@ -138,7 +138,7 @@ const Form = () => {
                 </option>
               </select>
             </div>
-            <div className="px-3 w-[50%]">
+            <div className="px-3 md:w-[50%]">
               <label
                 htmlFor="Number"
                 className="text-[15px] text-[#afafaf] mb-2 inline-block cursor-default"

@@ -9,8 +9,8 @@ const BestLocations = () => {
   return (
     <div className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-3">
-        <div className="w-[50%] ml-[25%] text-center px-3 m-0 mb-20">
-          <h2 className="m-0 mb-5 leading-[36px] text-[30px] font-bold capitalize text-[#2a2a2a]">
+        <div className="md:w-[50%] w-[70%] md:ml-[25%] mx-auto px-3 m-0 md:mb-20 mb-10">
+          <h2 className="m-0 leading-[36px] text-[30px] font-bold capitalize text-center text-[#2a2a2a]">
             {t("Best Locations")}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf]"></p>

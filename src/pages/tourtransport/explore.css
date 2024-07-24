@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .explore-container {
+    margin-top: 15px;
+  }
+
+  .explore.pr {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 11px !important;
+  }
+
+  .explore-heading {
+    margin-bottom: 4px !important;
+  }
+
+  .transport-content {
+    margin-top: 10px;
+  }
+
+  .transport-text {
+    margin-top: 12px;
+    margin-bottom: 17px;
+  }
+
+  .transport-card {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}

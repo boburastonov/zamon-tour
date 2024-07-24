@@ -1,76 +1,35 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// const MobileNav = () => {
-//   return (
-//     <div className=" flex w-full justify-between gap-[34px] items-start bg-[#2C2137] bg-red-700 fixed bottom-0 left-0 z-[100000] px-[18px] py-[11px] border-t border-gray-700">
-//         <Link
-//           href={"/"}
-//           className="w-3/12 flex flex-col gap-[10px] justify-center items-center relative"
-//         >
-//           {/* <GoHome className="text-[25px]" /> */}
-//           <p className="text-[11px] font-bold text-center leading-[13px]   ">
-//             Asosiy
-//           </p>
-//         </Link>
-//         <Link
-//           href={"/pages/CourseInfo"}
-//           className="w-3/12 flex flex-col gap-[10px] justify-center items-center text-[#FFFFFF99]"
-//         >
-//           {/* <IoCalendarClearOutline className="text-[25px]" /> */}
-//           <p className="toxt-[11px] font-normal text-center leading-[13px]">
-//             Kurslar
-//           </p>
-//         </Link>
-//         <Link
-//           href={"/pages/contact"}
-//           className="w-3/12 flex flex-col gap-[10px] justify-center items-center text-[#FFFFFF99]"
-//         >
-//           {/* <MdErrorOutline className="text-[25px]" /> */}
-//           <p className="toxt-[11px] font-normal text-center leading-[13px]">
-//             Biz bilan aloqa
-//           </p>
-//         </Link>
-//         <Link
-//           href={"/pages/personalInfo"}
-//           className="w-3/12 flex flex-col gap-[10px] justify-center items-center text-[#FFFFFF99]"
-//         >
-//           {/* <IoPeople className="text-[25px]" /> */}
-//           <p className="toxt-[11px] font-normal text-center leading-[13px]">
-//             Shaxsiy ma`lumotlar
-//           </p>
-//         </Link>
-//       </div>
-//   )
-// }
-
 // export default MobileNav
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const MobileNav = () => {
+  const { t, i18n } = useTranslation();
+  const changeLang = (e) => {
+    i18n.changeLanguage(e);
+  };
   return (
-    <div className="hidden max-w-28 absolute right-0 top-[76px] p-3 bg-[#22b3c1] px-[100px] transition-all duration-[.3s] text-white flex flex-col items-center text-base rounded-[10px]">
+    <div className="lg:hidden max-w-28 absolute right-0 top-[76px] p-3 bg-[#22b3c1] px-[100px] transition-all duration-[.3s] text-white flex flex-col items-center text-base rounded-[10px]">
       <ul className="p-0 m-0 list-none">
         <li className="mb-2">
-          <a href="/">Home</a>
+          <a href="/">{t('Home')}</a>
         </li>
         <li className="mb-2">
-          <a href="#bout">About</a>
+          <a href="#about">{t('About')}</a>
         </li>
         <li className="mb-2">
-          <a href="#tours">Tours</a>
+          <a href="#tours">{t('Tours')}</a>
         </li>
         <li className="mb-2">
-          <a href="#contact">Contact</a>
+          <a href="#contact">{t('Contact')}</a>
         </li>
         <li className="mb-2">
-          <a href="#">ENG</a>
+          <a href="#" onClick={() => changeLang("eng")}>ENG</a>
         </li>
         <li className="mb-2">
-          <a href="#contact">UZ</a>
+          <a href="#" onClick={() => changeLang("uz")}>UZ</a>
         </li>
         <li className="mb-2">
-          <a href="#contact">RU</a>
+          <a href="#" onClick={() => changeLang("ru")}>RU</a>
         </li>
         <li className="mb-2">
           <a href="https://t.me/zamonbiznestour" target="_blank">
@@ -130,6 +89,7 @@ const MobileNav = () => {
             </svg>
           </a>
         </li>
+        
       </ul>
     </div>
   );

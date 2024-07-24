@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
+import "./support.css";
 
 const VisaSupport = () => {
   const { t } = useTranslation();
@@ -23,6 +24,12 @@ const VisaSupport = () => {
     autoplaySpeed: 1800,
     responsive: [
       {
+        breakpoint: 400, // Set the breakpoint at 768px
+        settings: {
+          slidesToShow: 1, // Adjust this value as needed
+        },
+      },
+      {
         breakpoint: 768, // Set the breakpoint at 768px
         settings: {
           slidesToShow: 2, // Adjust this value as needed
@@ -39,8 +46,8 @@ const VisaSupport = () => {
   return (
     <div className="bg-white lg:py-[70px] md:py-10 border-b border-solid border-[#eee]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center mb-[80px] w-[50%] mx-auto">
-          <h2 className="mt-0 mb-5 leading-9 text-[30px] font-bold capitalize text-[#2a2a2a]">
+        <div className="support-pr flex flex-col items-center md:mb-[80px] w-[50%] md:mx-auto">
+          <h2 className="support-heading mt-0 mb-5 leading-9 lg:text-[30px] text-[26px] font-bold capitalize text-[#2a2a2a]">
             {t("Visa Support")}
           </h2>
           <p className="text-[15px] leading-[30px] text-[#afafaf] text-center">

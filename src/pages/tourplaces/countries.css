@@ -1,3 +1,26 @@
 .new-dr:hover .right-ic {
   transform: translateX(5px);
 }
+
+@media (max-width: 768px) {
+  .countries-pr {
+    margin-bottom: 11px;
+  }
+
+  .countries-heading {
+    margin-bottom: 4px;
+  }
+
+  .countries-text {
+    /* margin-top: 14px; */
+    margin-bottom: 4px !important;
+  }
+
+  .countries-txt {
+    margin-top: 0 !important;
+  }
+
+  .countries-content {
+    margin-top: 10px;
+  }
+}
