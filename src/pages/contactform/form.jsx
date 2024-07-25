@@ -2,11 +2,14 @@ import React from "react";
 import "./form.css";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
   const { t } = useTranslation();
 
   const SendMessage = (e) => {
+    const notify = () => toast("Your reservation has been sent successfully!");
     e.preventDefault();
     const token = "7229813830:AAFlDf6El0NDlFH5wod5x8vT1jV-IJhEKU8";
     const chat_id = "5730538728";
@@ -29,7 +32,7 @@ const Form = () => {
     })
       .then((res) => {
         document.getElementById("reservation-form").reset();
-        alert(t("Your reservation has been sent successfully!"));
+        notify();
       })
       .catch((err) => {
         console.log("Yuborishda xatolik,", err);
@@ -290,6 +293,7 @@ const Form = () => {
             <button className="w-full text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] text-center inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80">
               {t("Make Your Reservation Now")}
             </button>
+            <ToastContainer />
           </div>
         </form>
       </div>
