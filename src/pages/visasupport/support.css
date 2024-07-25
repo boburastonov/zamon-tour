@@ -3,7 +3,7 @@
     width: 100% !important;
     margin-bottom: 45px;
   }
-  
+
   .support-heading {
     margin-bottom: 14px !important;
   }
@@ -17,5 +17,9 @@
   .card-img {
     width: 200px !important;
   }
- 
+
+  .swiper-tour {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

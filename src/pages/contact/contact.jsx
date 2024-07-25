@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaMapMarker } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 import Contactcard from "./contactcard";
 import { useTranslation } from "react-i18next";
-import './contact.css'
+import "./contact.css";
 
 const Contact = () => {
   const { t } = useTranslation();

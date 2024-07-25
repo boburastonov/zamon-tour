@@ -16,7 +16,9 @@ const MoreInfo = ({ population, territory, price }) => {
               <RiUser3Fill className="lg:text-[24px] md:text-[20px]" />
             </div>
             <div>
-              <p className="text-[15px] font-normal text-[#AFAFAF">{t("Population")}:</p>
+              <p className="text-[15px] font-normal text-[#AFAFAF">
+                {t("Population")}:
+              </p>
               <h4 className="lg:text-[20px] text-[#22b3c1] lg:font-bold md:text-[18px] md:font-semibold leading-[28px] whitespace-nowrap">
                 {population} M
               </h4>
@@ -27,7 +29,9 @@ const MoreInfo = ({ population, territory, price }) => {
               <FaGlobe className="lg:text-[24px] md:text-[20px]" />
             </div>
             <div>
-              <p className="text-[15px] font-normal text-[#AFAFAF">{t("Territory")}:</p>
+              <p className="text-[15px] font-normal text-[#AFAFAF">
+                {t("Territory")}:
+              </p>
               <h4 className="lg:text-[20px] text-[#22b3c1] lg:font-bold md:text-[18px] md:font-semibold leading-[28px] whitespace-nowrap">
                 {territory} KM2
               </h4>
@@ -38,7 +42,9 @@ const MoreInfo = ({ population, territory, price }) => {
               <GoHomeFill className="lg:text-[24px] md:text-[20px]" />
             </div>
             <div>
-              <p className="text-[15px] font-normal text-[#AFAFAF">AVG {t("Price")}:</p>
+              <p className="text-[15px] font-normal text-[#AFAFAF">
+                AVG {t("Price")}:
+              </p>
               <h4 className="lg:text-[20px] text-[#22b3c1] lg:font-bold md:text-[18px] md:font-semibold leading-[28px] whitespace-nowrap">
                 ${price}
               </h4>

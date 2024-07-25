@@ -12,15 +12,17 @@ const Tours = () => {
   const handleNext = () => {
     sliderRef.slickNext();
   };
+
   const handlePrev = () => {
     sliderRef.slickPrev();
   };
+
   const settings = {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1800,
     responsive: [
       {

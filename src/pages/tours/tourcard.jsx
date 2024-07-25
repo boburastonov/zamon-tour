@@ -7,7 +7,10 @@ import { t } from "i18next";
 
 const Tourcard = ({ imgSource, cityName, userCount, price }) => {
   return (
-    <div className="tour-card relative md:w-[400px] h-[470px] md:px-10 md:ml-[-30px]" id="tours">
+    <div
+      className="tour-card relative md:w-[400px] h-[470px] md:px-10 md:ml-[-30px]"
+      id="tours"
+    >
       <img
         className="card-img rounded-tl-[23px] rounded-bl-[23px] overflow-hidden block md:w-[250px] h-96"
         src={imgSource}
@@ -36,11 +39,11 @@ const Tourcard = ({ imgSource, cityName, userCount, price }) => {
           </li>
           <li className="flex items-center text-[#afafaf] text-[14px] mb-[10px]">
             <IoIosAirplane className="mr-1" />
-            {t('Airplane Bill Included')}
+            {t("Airplane Bill Included")}
           </li>
           <li className="flex items-center text-[#afafaf] text-[14px] mb-[10px]">
             <FaBuilding className="mr-1" />
-            {t('Daily Places Visit')}
+            {t("Daily Places Visit")}
           </li>
         </ul>
         <div className="mt-[30px]">
@@ -48,7 +51,7 @@ const Tourcard = ({ imgSource, cityName, userCount, price }) => {
             href="#contact"
             className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition transition-all duration-[0.3s] hover:opacity-85 relative overflow-hidden"
           >
-            {t('Make a Reservation')}
+            {t("Make a Reservation")}
           </a>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Transportcard = ({ img, heading, littleText, mainText }) => {
             href="#contact"
             className="md:text-[14px] text-[12px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] md:py-3 md:px-[30px] py-2 px-4 inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-80"
           >
-            {t('Explore More')}
+            {t("Explore More")}
           </a>
         </div>
         <p className="transport-text m-0 md:my-[18px] text-[15px] leading-[30px] text-[#afafaf]">

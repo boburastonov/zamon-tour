@@ -3,7 +3,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./navbar.css";
 
-
 const MobileNav = () => {
   const { t, i18n } = useTranslation();
   const changeLang = (e) => {

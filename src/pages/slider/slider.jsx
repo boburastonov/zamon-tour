@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
@@ -34,17 +34,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/istanbul.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative slider-container">
               <h2 className="slider-heading text-white font-medium md:text-[20px] mb-5 text-[17px]">
-                {t('Take a Glimpse Into The Beautiful City Of')}:
+                {t("Take a Glimpse Into The Beautiful City Of")}:
               </h2>
               <h1 className="slider-country mb-[30px] text-white font-bold text-[50px]">
-                {t('Istanbul')}
+                {t("Istanbul")}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  {t('Go There')}
+                  {t("Go There")}
                 </a>
               </div>
               <MoreInfo
@@ -59,17 +59,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/antalya2.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative slider-container">
               <h2 className="slider-heading text-white font-medium text-[20px] mb-5">
-                {t('Take a Glimpse Into The Beautiful City Of')}:
+                {t("Take a Glimpse Into The Beautiful City Of")}:
               </h2>
               <h1 className="slider-country mb-[30px] text-white font-bold text-[50px]">
-                {t('Antalya')}
+                {t("Antalya")}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  {t('Go There')}
+                  {t("Go There")}
                 </a>
               </div>
               <MoreInfo
@@ -84,17 +84,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/dubai2.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative slider-container">
               <h2 className="slider-heading text-white font-medium text-[20px] mb-5">
-                {t('Take a Glimpse Into The Beautiful City Of')}:
+                {t("Take a Glimpse Into The Beautiful City Of")}:
               </h2>
               <h1 className="slider-country mb-[30px] text-white font-bold text-[50px]">
-                {t('Dubai')}
+                {t("Dubai")}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  {t('Go There')}
+                  {t("Go There")}
                 </a>
               </div>
               <MoreInfo
@@ -109,17 +109,17 @@ export default function App() {
           <div className="w-[100vw] lg:h-[91vh] mx-auto flex flex-col items-center lg:flex-row lg:justify-between bg-[url('https://zamontour.uz/assets/images/sharm.jpg')] bg-center bg-cover bg-no-repeat">
             <div className="w-full lg:h-[380px] py-[30px] lg:pt-0 relative slider-container">
               <h2 className="slider-heading text-white font-medium text-[20px] mb-5">
-                {t('Take a Glimpse Into The Beautiful City Of')}:
+                {t("Take a Glimpse Into The Beautiful City Of")}:
               </h2>
               <h1 className="slider-country mb-[30px] text-white font-bold text-[50px]">
-                {t('Sharm El-Sheikh')}
+                {t("Sharm El-Sheikh")}
               </h1>
               <div>
                 <a
                   href="#contact"
                   className="text-white text-[14px] font-medium capitalize inline-block tracking-[0.5px] bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] rounded-[25px]"
                 >
-                  {t('Go There')}
+                  {t("Go There")}
                 </a>
               </div>
               <MoreInfo

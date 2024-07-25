@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 import "./navbar.css";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation();
   const changeLang = (e) => {
     i18n.changeLanguage(e);
   };
