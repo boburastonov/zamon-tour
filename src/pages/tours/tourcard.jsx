@@ -49,7 +49,7 @@ const Tourcard = ({ imgSource, cityName, userCount, price }) => {
         <div className="mt-[30px]">
           <a
             href="#contact"
-            className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition transition-all duration-[0.3s] hover:opacity-85 relative overflow-hidden"
+            className="text-[14px] text-white bg-[#22b3c1] border border-solid border-[#22b3c1] py-3 px-[30px] inline-block rounded-[25px] font-medium capitalize tracking-[0.5px] transition-all duration-[0.3s] hover:opacity-85 relative overflow-hidden"
           >
             {t("Make a Reservation")}
           </a>
